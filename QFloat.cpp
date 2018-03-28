@@ -39,7 +39,7 @@ QFloat QFloat::operator = (const QFloat &p) {
 // Operator +
 QFloat QFloat::operator + (const QFloat &p)
 {
-    bool sign ;
+    bool sign = 0 ;
     int  pow1 = 0, pow2 = 0;
 	QFloat q(p);
 
@@ -144,7 +144,7 @@ QFloat QFloat::operator + (const QFloat &p)
 // Operator -
 QFloat QFloat::operator - (const QFloat &p)
 {
-    bool sign;
+    bool sign = 0;
 	int  pow1 = 0, pow2 = 0;
 	QFloat q(p);
 
