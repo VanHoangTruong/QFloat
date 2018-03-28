@@ -29,6 +29,7 @@ void QFloat::separate(int &pow)
 	this->data[1] = 0;
 }
 
+// operator =
 QFloat QFloat::operator = (const QFloat &p) {
 	for (int i = 0; i < 16; i++)
 		this->data[i] = p.data[i];
@@ -517,14 +518,17 @@ string ConvertQFloatToDecString(QFloat input){
 	return ans + '.' + res;
 }
 
+// hàm chuyển đổi từ chuỗi nhị phân sang QFloat
 QFloat ConvertBinStringToQFloat(string input){
     QInt temp = ConvertBinStringToQInt(input);
     return QFloat(temp.data);
 }
 
+// hàm chuyển đổi từ QFloat sang chuỗi nhị phân
 string ConvertQFloatToBinString(QFloat input){
     QInt temp = QInt(input.data);
     string ans = ConvertQIntToBinString(temp);
     while (ans.length() < 128) ans = '0' + ans;
     return ans;
 }
+
