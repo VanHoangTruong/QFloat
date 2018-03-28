@@ -3,9 +3,9 @@
 
 char operatorArray[10] = {'+', '-', '*', '/', '&', '|', '^', '~', '<', '>'};
 
-int main() {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+int main(int argc, char* argv[]) {
+    freopen(argv[1], "r", stdin);
+    freopen(argv[2], "w", stdout);
     while(1){
         string a, b, c, d;
         bool flag = false;
